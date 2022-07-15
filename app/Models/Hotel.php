@@ -15,12 +15,12 @@ class Hotel extends Model
         'website',
         'location',
         'about',
-        'profile image'
+        'profileimage'
     ];
 
     protected $casts = [
         'amenities' => 'array',
-        'hotel images' => 'array'
+        'hotelimages' => 'array'
     ];
 
     protected function reviews(){

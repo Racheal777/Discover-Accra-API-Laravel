@@ -15,12 +15,12 @@ class Restaurant extends Model
         'website',
         'location',
         'about',
-        'profile image'
+        'profileimage'
     ];
 
     protected $casts = [
         'amenities' => 'array',
-        'restaurant images' => 'array'
+        'restaurantimages' => 'array'
     ];
 
     protected function reviews(){

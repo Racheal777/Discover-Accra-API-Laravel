@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ReviewCollection;
+use App\Http\Resources\ReviewResource;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class RestaurantController extends Controller
+class ReviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +18,9 @@ class RestaurantController extends Controller
     public function index()
     {
         //
+        $review = Review::all();
+
+        return new ReviewCollection($review);
     }
 
     /**
@@ -26,7 +32,20 @@ class RestaurantController extends Controller
     public function store(Request $request)
     {
         //
-    }
+
+        //return 'hellll';
+        $review = new Review();
+
+        $review->message = $request->input('message');
+        $review->ratings = $request->input('ratings');
+        $review->user_id = $request->input('user_id');
+        $review->hotel_id = $request->input('hotel_id');
+
+        $review->save();
+
+        return new ReviewResource($review) ;
+
+        }
 
     /**
      * Display the specified resource.

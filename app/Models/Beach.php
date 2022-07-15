@@ -15,12 +15,12 @@ class Beach extends Model
         'website',
         'location',
         'about',
-        'profile image'
+        'profileimage'
     ];
 
     protected $casts = [
         'amenities' => 'array',
-        'beach images' => 'array'
+        'beachimages' => 'array'
     ];
 
 

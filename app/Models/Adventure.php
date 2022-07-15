@@ -15,12 +15,12 @@ class Adventure extends Model
         'website',
         'location',
         'about',
-        'profile image'
+        'profileimage'
     ];
 
     protected $casts = [
         'amenities' => 'array',
-        'adventure images' => 'array'
+        'adventureimages' => 'array'
     ];
 
     //relationship

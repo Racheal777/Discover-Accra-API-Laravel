@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('website')->nullable();
             $table->text('about');
             $table->json('amenities');
-            $table->string('profile image');
-            $table->json('hotel images')->nullable();
+            $table->string('profileimage');
+            $table->json('hotelimages')->nullable();
             $table->timestamps();
         });
     }
